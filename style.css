@@ -1,0 +1,304 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  padding: 30px 16px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(26px, 5vw, 38px);
+  margin: 6px 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+h3 {
+  font-size: 23px;
+  margin: 10px 0 0;
+  overflow-wrap: anywhere;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.muted {
+  color: #697386;
+  font-size: 14px;
+  margin: 4px 0 14px;
+}
+
+.wallet-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 28px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.card, .balance-card {
+  background: white;
+  border: 1px solid #e3e8f1;
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px #17203308;
+}
+
+.settings-grid, .expense-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d5dce8;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 400;
+  background: white;
+  color: #172033;
+}
+
+input:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.button {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 17px;
+  background: #2563eb;
+  color: white;
+  font-weight: 750;
+  font-size: 14px;
+  cursor: pointer;
+  align-self: end;
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.balance-card {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+  background: #12233f;
+  color: white;
+  border: none;
+}
+
+.balance-card p {
+  color: #cbd5e1;
+  margin: 0 0 8px;
+}
+
+.balance-card h2 {
+  font-size: clamp(30px, 6vw, 42px);
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.stat {
+  margin-bottom: 0;
+  padding: 17px;
+}
+
+.stat h3 {
+  font-size: clamp(18px, 3vw, 24px);
+}
+
+.warning {
+  padding: 17px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #fca5a5;
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 14px;
+}
+
+.warning p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.warning[hidden] {
+  display: none;
+}
+
+.history-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.count {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 7px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.expense-list {
+  margin-top: 16px;
+}
+
+.expense-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #edf0f5;
+  padding: 15px 0;
+}
+
+.expense-name {
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.expense-date {
+  color: #697386;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.expense-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.expense-amount {
+  font-weight: 800;
+  color: #dc2626;
+}
+
+.delete-button {
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #fef2f2;
+}
+
+.empty {
+  text-align: center;
+  padding: 20px 0;
+  color: #697386;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  color: #697386;
+  font-size: 12px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .card, .balance-card {
+    padding: 17px;
+  }
+
+  .summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .balance-card {
+    grid-column: 1 / -1;
+  }
+
+  .settings-grid, .expense-form {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .expense-row {
+    align-items: flex-start;
+  }
+
+  .expense-right {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+  }
+}
